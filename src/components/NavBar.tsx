@@ -3,7 +3,7 @@
   import { motion, AnimatePresence } from 'framer-motion';
 
   export const NavBar = () => {
-    const [scrolled, setScrolled] = useState(false);
+   
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
@@ -62,13 +62,7 @@
   };
 
     return (
-      <nav
-        className={`transition-all duration-300 w-full ${
-          scrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100' 
-            : 'bg-white border-b border-gray-100'
-        }`}
-      >
+     <nav className="transition-all duration-300 w-full bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 py-3">
             

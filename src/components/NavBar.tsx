@@ -1,5 +1,5 @@
   import { useState, useEffect } from 'react';
-  import { Laptop, MessageCircle, Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
   import { motion, AnimatePresence } from 'framer-motion';
 
   export const NavBar = () => {

@@ -18,39 +18,29 @@
 
     // Scroll depth monitor for glassmorphism background effect
     useEffect(() => {
-      const handleScroll = () => setScrolled(window.scrollY > 10);
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + 150;
 
-    // ✅ Fixed Intersection Observer Configuration for Perfect Highlights
-    // useEffect(() => {
-    //   const sectionIds = navLinks.map(l => l.id);
-    //   const observers: IntersectionObserver[] = [];
+    for (const link of navLinks) {
+      const section = document.getElementById(link.id);
 
-    //   sectionIds.forEach(id => {
-    //     const el = document.getElementById(id);
-    //     if (!el) return;
-        
-    //     const observer = new IntersectionObserver(
-    //       ([entry]) => {
-    //         // thoda sa bhi enter karte hi section detect ho jayega
-    //         if (entry.isIntersecting) {
-    //           setActiveSection(id);
-    //         }
-    //       },
-    //       { 
-    //         // Re-mapped standard bounding area taaki bottom elements skip na ho
-    //         rootMargin: '-20% 0px -40% 0px', 
-    //         threshold: 0.1 
-    //       }
-    //     );
-    //     observer.observe(el);
-    //     observers.push(observer);
-    //   });
+      if (!section) continue;
 
-    //   return () => observers.forEach(o => o.disconnect());
-    // }, []);
+      const top = section.offsetTop;
+      const bottom = top + section.offsetHeight;
+
+      if (scrollPosition >= top && scrollPosition < bottom) {
+        setActiveSection(link.id);
+        break;
+      }
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Initial check
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);

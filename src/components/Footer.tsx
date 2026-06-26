@@ -1,5 +1,3 @@
-
-import { Laptop } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 
 export const Footer = () => {
@@ -16,16 +14,24 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-[#2563EB] flex items-center justify-center">
-                <Laptop className="text-white" size={20} />
-              </div>
-              <div className="flex flex-col leading-none">
-                <p className="font-bold text-xl text-white tracking-wider">THAKRAL</p>
-                <p className="font-medium text-xs text-[#22C55E] tracking-widest">INFOWAYS</p>
-              </div>
-            </div>
+         {/* Brand */}
+<div>
+  <div className="flex items-center gap-3 mb-5">
+  <img
+    src="/favicons.jpeg"
+    alt="Thakral Infoways Logo"
+    className="w-12 h-12 object-contain"
+  />
+
+  <div className="flex flex-col leading-none">
+    <p className="font-bold text-xl text-white tracking-wider">
+      THAKRAL
+    </p>
+    <p className="font-medium text-xs text-[#22C55E] tracking-widest">
+      INFOWAYS
+    </p>
+  </div>
+</div>
             <p className="text-blue-200 text-sm leading-relaxed mb-6">
              Your trusted partner for refurbished laptops, laptop rentals, laptop repairs, accessories, and complete IT solutions across Gurgaon & Delhi NCR.
             </p>

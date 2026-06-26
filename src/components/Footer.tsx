@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Laptop } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 

@@ -1,11 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 
 export const Hero = () => {
   const scrollTo = (id: string) => {
-  setMobileMenuOpen(false);
-
   setTimeout(() => {
     const element = document.getElementById(id);
 
@@ -13,8 +10,6 @@ export const Hero = () => {
 
     const y =
       element.getBoundingClientRect().top + window.scrollY - 102;
-
-    console.log("Scroll Y:", y);
 
     window.scrollTo({
       top: y,

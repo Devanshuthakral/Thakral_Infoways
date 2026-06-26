@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';

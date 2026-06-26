@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Cpu, HardDrive, Shield, Monitor } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';

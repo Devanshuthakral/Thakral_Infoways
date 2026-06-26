@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -34,15 +33,6 @@ export const About = () => {
     },
   ];
 
-  const achievements = [
-    "5000+ Happy Customers",
-    "98% Customer Satisfaction",
-    "6 Months Warranty Standard",
-    "50+ Corporate Clients",
-    "Same Day Service Available",
-    "ISO Quality Certified",
-  ];
-
   return (
     <section id="about" className="bg-[#F1F5F9] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,6 +43,7 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center mb-16"
+          
         >
           <p className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-5">
             About Thakral Infoways
@@ -169,7 +160,7 @@ export const About = () => {
           </motion.div>
         </div>
 
-        {/* Core Values */}
+        {/* */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -209,7 +200,7 @@ export const About = () => {
         </motion.div>
 
        {/* Achievements */}
-               {/* Achievements */}
+
 <section className="pt-6 pb-16">
   <div className="text-center mb-10">
     <p className="text-4xl font-bold text-[#0F172A] mb-4">
@@ -227,8 +218,7 @@ export const About = () => {
       "98% Customer Satisfaction",
       "6 Months Warranty Standard",
       "50+ Corporate Clients",
-      "Same Day Service Available",
-      "ISO Quality Certified",
+      "Same Day Service Available"
     ].map((item, index) => (
       <div
   key={index}

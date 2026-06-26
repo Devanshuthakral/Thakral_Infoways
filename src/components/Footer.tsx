@@ -30,21 +30,21 @@ export const Footer = () => {
              Your trusted partner for refurbished laptops, laptop rentals, laptop repairs, accessories, and complete IT solutions across Gurgaon & Delhi NCR.
             </p>
             <div className="flex items-center gap-3 mb-6">
-              {[
-                { icon: FaFacebook, hover: '#1877F2' },
-                { icon: FaInstagram, hover: '#E1306C' },
-                { icon: FaLinkedin, hover: '#0A66C2' },
-                { icon: FaYoutube, hover: '#FF0000' },
-              ].map(({ icon: Icon, hover }, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-blue-200 hover:text-white hover:bg-white/20 transition-all"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
+  {[
+    { icon: FaFacebook },
+    { icon: FaInstagram },
+    { icon: FaLinkedin },
+    { icon: FaYoutube },
+  ].map(({ icon: Icon }, i) => (
+    <a
+      key={i}
+      href="#"
+      className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-blue-200 hover:text-white hover:bg-white/20 transition-all"
+    >
+      <Icon size={16} />
+    </a>
+  ))}
+</div>
             <a
               href="https://wa.me/918950897636"
               target="_blank"

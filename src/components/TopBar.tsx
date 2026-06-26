@@ -1,5 +1,4 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const TopBar = () => {
   return (

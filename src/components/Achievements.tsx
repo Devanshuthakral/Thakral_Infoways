@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import  { useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Users, TrendingUp, Building2, Clock, Shield } from 'lucide-react';
+
 
 const achievements = [
   { icon: Users, value: 5000, suffix: '+', label: 'Happy Customers', color: '#2563EB', bg: '#EFF6FF' },
@@ -32,7 +34,7 @@ const Counter = ({ from = 0, to, duration = 2, inView }: { from?: number; to: nu
 };
 
 export const Achievements = () => {
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const containerVariants = {
